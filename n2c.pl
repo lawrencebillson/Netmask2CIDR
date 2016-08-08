@@ -6,7 +6,8 @@
 
 sub netmask2cidr {
         my $a =  unpack('N', (pack 'C4', split(/\./,shift)));
-        return 32 - (log(2**32 - $a)/log(2));
+           return int 0.1 + (32 - (log(2**32 - $a)/log(2)));
+
         }
 
 
